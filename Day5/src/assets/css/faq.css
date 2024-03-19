@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+
+.FAQ
+{
+    overflow-y: hidden;
+}
+.containerF {
+  margin: 0 auto;
+  padding: 4rem;
+  margin-top: 40px;
+  width: 48rem;
+  height: 500px;
+  background-color: rgba(211, 229, 246, 0.932);
+  overflow: hidden;
+}
+
+.containerF h2 {
+  color: #000000;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.buttonF {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #000000; 
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+  transition: color 0.3s; 
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: var(--blue);
+  }
+
+  .accordion-title {
+    padding: 1em 1.5em 1em 0;
+  }
+
+  .iconF {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+    transition: color 0.3s; /* Added transition for color change */
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 9px;
+      left: 5px;
+      width: 10px;
+      height: 2px;
+      background: black;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: 9px;
+      width: 2px;
+      height: 10px;
+      background: black;
+    }
+  }
+}
+
+.buttonF[aria-expanded='true'] {
+  color: #000000; /* Change text color to white when expanded */
+}
+
+.buttonF[aria-expanded='true'] .iconF::before,
+.buttonF[aria-expanded='true'] .iconF::after {
+  background-color: #141414; /* Change icon color to white when expanded */
+}
+
+.accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+  /* background-color: rgba(192, 224, 243, 0.7); */
+  padding: 10px; /* Added padding for better readability */
+}
+
+.buttonF[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+}
+
+/* @media (max-width:376px) {
+  .containerF {
+    margin: auto auto;
+    left: 70px;
+    position: relative;
+    top: 80px;
+    padding: 5px;
+    overflow-x: auto;
+    width: 500px;
+    background-color: rgba(211, 229, 246, 0.932);
+    /* background-color: rgba(238, 217, 217, 0.932) 
+  }
+    
+}
+@media (min-width:377px) and (max-width:766px) {
+  .containerF {
+    margin: auto auto;
+    left: 50px;
+    position: relative;
+    top: 80px;
+    padding: 5px;
+    overflow-x: auto;
+    width: 500px;
+    background-color: rgba(211, 229, 246, 0.932);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+}
+@media (min-width: 1023px) and (max-width: 1199px) {
+    
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+          
+} */
