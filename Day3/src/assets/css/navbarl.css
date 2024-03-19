@@ -1,0 +1,48 @@
+.navbarl {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: #fff;
+    width: 97.7%;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: 1000; 
+  }
+  
+  .btnl {
+    background-color: transparent;
+    border: none;
+    color: #ffffff; 
+    cursor: pointer;
+    font-size: 17px;
+    padding: 8px 16px;
+    transition: color 0.3s;
+  }
+  .navbarl-right
+  {
+    display: flex;
+  }
+  .navbarl-logo
+  {
+    background-image: url("D:\collegead\src\assets\images\2-removebg-preview.png");
+    position: fixed;
+  }
+
+  @media (max-width: 768px) {
+    .navbarl {
+      flex-direction: column;
+      padding: 5px;
+    }
+    
+    .navbarl-right {
+      margin-top: 10px; 
+    }
+    
+    .btnl {
+      font-size: 14px; 
+      padding: 6px 12px; 
+    }
+  }
